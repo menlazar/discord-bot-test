@@ -23,4 +23,4 @@ async def on_message(message):
     if message.content.startswith('$time'):
         await message.channel.send('tiempo restante en hunt es: ' + str(totalTime) )
 
-client.run('OTM5OTk0MzAzOTY1NTkzNjAw.YgA76g.Aj5CGftmvLaLJXGnyO-KaLqueRs')
+client.run(os.getenv('TOKEN'))
