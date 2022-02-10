@@ -1,0 +1,5 @@
+- name: run-test
+env:
+  API_KEY: ${{ secrets.TOKEN }}
+run:
+  nbdev_test_nbs
