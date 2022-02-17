@@ -1,10 +1,8 @@
-import asyncio
-from email import message
-from turtle import delay
-from attr import NOTHING, field
-import discord
 import os
+import asyncio
+import discord
 
+my_secret = os.environ['TOKEN']
 client = discord.Client()
 hunt = int(60)
 eventValue = float(0.25)
@@ -59,4 +57,4 @@ async def on_message(message):
 
 
 
-client.run('')
+client.run(my_secret)
