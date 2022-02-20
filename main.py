@@ -2,7 +2,6 @@ import os
 import asyncio
 import discord
 
-my_secret = os.environ['TOKEN']
 client = discord.Client()
 hunt = int(60)
 eventValue = float(0.25)
