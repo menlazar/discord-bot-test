@@ -16,7 +16,12 @@ totalTime = donatorhunt - eventTime
 @client.event
 async def on_ready():
     print('We have logged in as {0.user}'.format(client))
-#again xD
+
+@client.command()
+async def italic(ctx):
+    response = 'This text has some words *emphasized* in _different_ ways'
+    await ctx.send(response)
+
 @client.event
 async def on_message(message):
     dcuser = message.author.name
