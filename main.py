@@ -18,7 +18,7 @@ totalTime = donatorhunt - eventTime
 async def on_ready():
     print('We have logged in as {0.user}'.format(client))
 
-@client.command()
+@client.event
 async def embed(ctx):
     embed=discord.Embed(title="Sample Embed",
     url="https://realdrewdata.medium.com/",
