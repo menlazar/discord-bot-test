@@ -19,8 +19,6 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    dcuser = message.author.name
-
 
     if message.author == client.user:
         return
@@ -33,11 +31,11 @@ async def on_message(message):
                 value_energy = int(field.value.splitlines()[0].split("**ENERGY**: ")[1])
                 if value_stealth >= 90:
                     if value_energy >= 1000:
-                        await message.channel.send("I recommend to do a Guild Upgrade")
+                        await message.channel.send("I recommend to do a Guild **UPGRADE**")
                     elif value_energy < 1000:
-                        await message.channel.send("I recommend to do a Guild Raid")
+                        await message.channel.send("I recommend to do a Guild **RAID**")
                 elif value_stealth < 90:
-                    await message.channel.send("Hi looking at the Stealth level i recommend Upgrade " + dcuser)
+                    await message.channel.send("Hi looking at the Stealth level i recommend **UPGRADE]** ")
                 else:
                     # it will never get here/ true XD, lets test it out.  BEAUTIFUL XD yes if you need anything else only that for the moment! many thanks for helping me ;)
                     return
