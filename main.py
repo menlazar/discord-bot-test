@@ -1,7 +1,7 @@
 import os
 import asyncio
 import discord
-from discord.ext import commands
+from discord.ext.commands import Bot
 
 my_secret = os.environ['TOKEN']
 client = discord.Client()
@@ -40,7 +40,7 @@ async def on_message(message):
                 else:
                     return
 
-@client.command()
+@Bot.command()
 async def embed(ctx):
     embed = discord.Embed(title="Sample Embed", url="https://realdrewdata.medium.com/", description="This is an embed that will show how to build an embed and the different components", color=0xFF5733)
     await ctx.send(embed=embed)
