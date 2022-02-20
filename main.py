@@ -1,6 +1,11 @@
+from http.client import HTTPResponse
 import os
 import asyncio
 import discord
+
+def index(request):
+    times = int(os.environ.get('TOKEN', 3))
+    return HTTPResponse('what' + times)
 
 my_secret = os.environ['TOKEN']
 client = discord.Client()
