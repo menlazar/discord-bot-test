@@ -35,22 +35,14 @@ async def on_message(message):
                     elif value_energy < 1000:
                         await message.channel.send("I recommend to do a Guild **RAID**")
                 elif value_stealth < 90:
-                    await message.channel.send("Hi looking at the Stealth level i recommend **UPGRADE]** ")
+                    await message.channel.send("Hi looking at the Stealth level i recommend **UPGRADE** ")
                 else:
-                    # it will never get here/ true XD, lets test it out.  BEAUTIFUL XD yes if you need anything else only that for the moment! many thanks for helping me ;)
                     return
-        # With F10 - StepOver - it will jump line 
-        # f11 - StepIn - It will enter on the function if there is any on the line
-        # StepOut - no its the oposite of stepin
-
-        # lets see
 
 
-
-
-    if "rpg hunt t" in message.content:
-        await asyncio.sleep(totalTime)
-        await message.channel.send("Hunt T Ready")
+    #if "rpg hunt t" in message.content:
+    #    await asyncio.sleep(totalTime)
+    #    await message.channel.send("Hunt T Ready")
 
 
 
