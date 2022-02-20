@@ -18,7 +18,7 @@ totalTime = donatorhunt - eventTime
 async def on_ready():
     print('We have logged in as {0.user}'.format(client))
 
-@client.event
+@client.command()
 async def embed(ctx):
     embed=discord.Embed(title="Sample Embed",
     url="https://realdrewdata.medium.com/",
@@ -48,6 +48,10 @@ async def on_message(message):
                 else:
                     return
 
+@client.command()
+async def embed(ctx):
+    embed=discord.Embed(title="Sample Embed", url="https://realdrewdata.medium.com/", description="This is an embed that will show how to build an embed and the different components", color=0xFF5733)
+    await ctx.send(embed=embed)
 
     #if "rpg hunt t" in message.content:
     #    await asyncio.sleep(totalTime)
