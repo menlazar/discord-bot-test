@@ -1,7 +1,10 @@
+from distutils import command
 import os
 import asyncio
 import discord
-from discord.ext.commands import Bot
+from discord.ext import commands
+
+botcom = commands.bot(command_prefix = '.')
 
 my_secret = os.environ['TOKEN']
 client = discord.Client()
@@ -18,9 +21,13 @@ totalTime = donatorhunt - eventTime
 async def on_ready():
     print('We have logged in as {0.user}'.format(client))
 
+@botcom.command()
+async def embed(ctx):
+    embed = discord.Embed(title="Sample Embed", url="https://realdrewdata.medium.com/", description="This is an embed that will show how to build an embed and the different components", color=0xFF5733)
+
 @client.event
 async def on_message(message):
-
+    
     if message.author == client.user:
         return
 
@@ -40,16 +47,11 @@ async def on_message(message):
                 else:
                     return
 
-@Bot.command()
-async def embed(ctx):
-    embed = discord.Embed(title="Sample Embed", url="https://realdrewdata.medium.com/", description="This is an embed that will show how to build an embed and the different components", color=0xFF5733)
-    await ctx.send(embed=embed)
+
+            await ctx.send(embed=embed)
 
     #if "rpg hunt t" in message.content:
     #    await asyncio.sleep(totalTime)
     #    await message.channel.send("Hunt T Ready")
-
-
-
 
 client.run(my_secret)
