@@ -1,12 +1,9 @@
 import os
 import asyncio
 import discord
-import boto
-
-from boto.s3.connection import S3Connection
 
 
-my_secret = S3Connection(os.environ['S3_KEY'], os.environ['S3_SECRET'])
+my_secret = 'test'
 client = discord.Client()
 hunt = int(60)
 eventValue = float(0.25)
