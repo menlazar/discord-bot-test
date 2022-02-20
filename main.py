@@ -4,8 +4,7 @@ import asyncio
 import discord
 from discord.ext import commands
 
-botcom = commands.bot(command_prefix = '.')
-
+newclient = command.Bot(command_prefix = '.')
 my_secret = os.environ['TOKEN']
 client = discord.Client()
 hunt = int(60)
@@ -21,9 +20,9 @@ totalTime = donatorhunt - eventTime
 async def on_ready():
     print('We have logged in as {0.user}'.format(client))
 
-@botcom.command()
-async def embed(ctx):
-    embed = discord.Embed(title="Sample Embed", url="https://realdrewdata.medium.com/", description="This is an embed that will show how to build an embed and the different components", color=0xFF5733)
+@newclient.command()
+async def ping(ctx):
+    await ctx.send("pong")
 
 @client.event
 async def on_message(message):
@@ -46,9 +45,6 @@ async def on_message(message):
                     await message.channel.send("Hi looking at the Stealth level i recommend **UPGRADE** ")
                 else:
                     return
-
-
-            await ctx.send(embed=embed)
 
     #if "rpg hunt t" in message.content:
     #    await asyncio.sleep(totalTime)
