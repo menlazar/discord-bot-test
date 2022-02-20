@@ -3,11 +3,7 @@ import os
 import asyncio
 import discord
 
-def index(request):
-    times = int(os.environ.get('TOKEN', 3))
-    return HTTPResponse('what' + times)
-
-my_secret = os.environ['TOKEN']
+my_secret = os.environ.get['TOKEN']
 client = discord.Client()
 hunt = int(60)
 eventValue = float(0.25)
