@@ -40,6 +40,10 @@ async def on_message(message):
                     await message.channel.send("Hi looking at the Stealth level i recommend **UPGRADE** ")
                 else:
                     return
+    
+    embed=discord.Embed(title="Sample Embed", url="https://realdrewdata.medium.com/", description="This is an embed that will show how to build an embed and the different components", color=0xFF5733)
+    if "embed" in message.content:
+        await message.channel.send(embed=embed)
 
     #if "rpg hunt t" in message.content:
     #    await asyncio.sleep(totalTime)
