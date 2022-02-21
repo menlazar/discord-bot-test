@@ -33,7 +33,10 @@ async def on_message(message):
                 value_energy = int(field.value.splitlines()[0].split("**ENERGY**: ")[1])
                 if value_stealth >= 90:
                     if value_energy >= 1000:
-                        await message.channel.send("I recommend to do a Guild **UPGRADE**")
+                        embed=discord.Embed(title="Demon Slayrs Helper Bot",
+                        description="I recommend to do a Guild **UPGRADE**",
+                        color=0xFF5733)
+                        await message.channel.send(embed=embed)
                     elif value_energy < 1000:
                         await message.channel.send("I recommend to do a Guild **RAID**")
                 elif value_stealth < 90:
@@ -41,7 +44,9 @@ async def on_message(message):
                 else:
                     return
     
-    embed=discord.Embed(title="Sample Embed", url="https://realdrewdata.medium.com/", description="This is an embed that will show how to build an embed and the different components", color=0xFF5733)
+    embed=discord.Embed(title="Demon Slayrs Helper Bot",
+                        description="I recommend to do a Guild **UPGRADE**",
+                        color=0xFF5733)
     if "embed" in message.content:
         await message.channel.send(embed=embed)
 
