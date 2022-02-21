@@ -1,4 +1,3 @@
-from distutils import command
 import os
 import asyncio
 import discord
@@ -34,24 +33,21 @@ async def on_message(message):
                 if value_stealth >= 90:
                     if value_energy >= 1000:
                         embed=discord.Embed(title="Demon Slayrs Helper Bot",
-                                            description="I recommend to do a Guild **UPGRADE**",
+                                            description="The recommendation looking at the stats is to do a Guild **UPGRADE**",
                                             color=0xFF5733)
                         await message.channel.send(embed=embed)
                     elif value_energy < 1000:
-                        await message.channel.send("I recommend to do a Guild **RAID**")
+                        embed=discord.Embed(title="Demon Slayrs Helper Bot",
+                                            description="The recommendation looking at the stats is to do a Guild **RAID**",
+                                            color=0xFF5733)
+                        await message.channel.send(embed=embed)
                 elif value_stealth < 90:
                         embed=discord.Embed(title="Demon Slayrs Helper Bot",
-                                            description="looking at the Stealth level i recommend **UPGRADE**",
+                                            description="The recommendation looking at the stats is to do a Guild **UPGRADE**",
                                             color=0xFF5733)
                         await message.channel.send(embed=embed)
                 else:
                     return
-    
-    embed=discord.Embed(title="Demon Slayrs Helper Bot",
-                        description="I recommend to do a Guild **UPGRADE**",
-                        color=0xFF5733)
-    if "embed" in message.content:
-        await message.channel.send(embed=embed)
 
     #if "rpg hunt t" in message.content:
     #    await asyncio.sleep(totalTime)
