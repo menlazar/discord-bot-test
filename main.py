@@ -49,6 +49,18 @@ async def on_message(message):
                 else:
                     return
 
+
+
+                #Guild action reminder
+
+        for embed in embeds:
+            for field in embed.fields:
+                if "Your guild has already" in field.value:
+                    await message.channel.send("already raided")
+                else:
+                    return
+
+
     #if "rpg hunt t" in message.content:
     #    await asyncio.sleep(totalTime)
     #    await message.channel.send("Hunt T Ready")
