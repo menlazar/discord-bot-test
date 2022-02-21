@@ -4,7 +4,6 @@ import asyncio
 import discord
 from discord.ext import commands
 
-newclient = command.Bot(command_prefix = '.')
 my_secret = os.environ['TOKEN']
 client = discord.Client()
 hunt = int(60)
@@ -19,10 +18,6 @@ totalTime = donatorhunt - eventTime
 @client.event
 async def on_ready():
     print('We have logged in as {0.user}'.format(client))
-
-@newclient.command()
-async def ping(ctx):
-    await ctx.send("pong")
 
 @client.event
 async def on_message(message):
