@@ -34,13 +34,16 @@ async def on_message(message):
                 if value_stealth >= 90:
                     if value_energy >= 1000:
                         embed=discord.Embed(title="Demon Slayrs Helper Bot",
-                        description="I recommend to do a Guild **UPGRADE**",
-                        color=0xFF5733)
+                                            description="I recommend to do a Guild **UPGRADE**",
+                                            color=0xFF5733)
                         await message.channel.send(embed=embed)
                     elif value_energy < 1000:
                         await message.channel.send("I recommend to do a Guild **RAID**")
                 elif value_stealth < 90:
-                    await message.channel.send("Hi looking at the Stealth level i recommend **UPGRADE** ")
+                        embed=discord.Embed(title="Demon Slayrs Helper Bot",
+                                            description="looking at the Stealth level i recommend **UPGRADE**",
+                                            color=0xFF5733)
+                        await message.channel.send(embed=embed)
                 else:
                     return
     
