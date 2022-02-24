@@ -73,9 +73,9 @@ async def on_message(message):
     embeds = message.embeds
     for embed in embeds:
         for field in embed.fields:
-            if "A MEGALODON" in field.name:
+            if "A MEGALODON" in field.title:
                 time.sleep(1)
-                await message.channel.send("@everyone FISH")
+                await message.channel.send("FISH @everyone")
             else:
                 return
 
@@ -88,9 +88,9 @@ async def on_message(message):
     embeds = message.embeds
     for embed in embeds:
         for field in embed.fields:
-            if "AN EPIC TREE" in field.name:
+            if "AN EPIC TREE" in field.title:
                 time.sleep(1)
-                await message.channel.send("@everyone CHOP")
+                await message.channel.send("CHOP @everyone")
             else:
                 return
 
@@ -103,10 +103,9 @@ async def on_message(message):
     embeds = message.embeds
     for embed in embeds:
         for field in embed.fields:
-            if "A LOOTBOX SUMMONING" in field.name:
+            if "A LOOTBOX SUMMONING" in field.title:
                 time.sleep(1)
-                embed=discord.Embed(title="@everyone SUMMON")
-                await message.channel.send(embed = embed)
+                await message.channel.send("SUMMON @everyone")
             else:
                 return
 
@@ -119,10 +118,9 @@ async def on_message(message):
     embeds = message.embeds
     for embed in embeds:
         for field in embed.fields:
-            if "IT'S RAINING COINS" in field.name:
+            if "IT'S RAINING COINS" in field.title:
                 time.sleep(1)
-                embed=discord.Embed(title="@everyone CATCH")
-                await message.channel.send(embed = embed)
+                await message.channel.send("CATCH @everyone")
             else:
                 return
 
@@ -135,10 +133,9 @@ async def on_message(message):
     embeds = message.embeds
     for embed in embeds:
         for field in embed.fields:
-            if "A LEGENDARY BOSS" in field.name:
+            if "A LEGENDARY BOSS" in field.title:
                 time.sleep(1)
-                embed=discord.Embed(title="@everyone TIME TO FIGHT")
-                await message.channel.send(embed = embed)
+                await message.channel.send("TIME TO FIGHT @everyone")
             else:
                 return
 #------------------------------------------------ END RANDOM EVENTS ---------------------------------------------------
