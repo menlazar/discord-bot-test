@@ -1,4 +1,5 @@
 import os
+import time
 import asyncio
 import discord
 from discord.ext import commands
@@ -53,13 +54,29 @@ async def on_message(message):
 
                 #Guild action reminder
 
-        for embed in embeds:
-            for field in embed.fields:
-                if "Your guild has already" in field.value:
-                    await message.channel.send("already raided")
-                else:
-                    return
+        # for embed in embeds:
+        #     for field in embed.fields:
+        #         if "Your guild has already" in field.value:
+        #             await message.channel.send("already raided")
+        #         else:
+        #             return
 
+                #Random Events
+@client.event
+async def on_message(message):
+    
+    if message.author == client.user:
+        return
+
+    embeds = message.embeds
+    for embed in embeds:
+        for field in embed.fields:
+            if "A MEGALODON" in field.name:
+                time.sleep(1)
+                embed=discord.Embed(title="@everyone FISH")
+                await message.channel.send(embed = embed)
+            else:
+                return
 
     #if "rpg hunt t" in message.content:
     #    await asyncio.sleep(totalTime)
