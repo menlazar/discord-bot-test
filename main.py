@@ -73,7 +73,7 @@ async def on_message(message):
     embeds = message.embeds
     for embed in embeds:
         for field in embed.fields:
-            if "Type **FISH**" in field.description:
+            if "Type **FISH**" in field[1].description:
                 time.sleep(1)
                 await message.channel.send("FISH @everyone")
             else:
@@ -88,7 +88,7 @@ async def on_message(message):
     embeds = message.embeds
     for embed in embeds:
         for field in embed.fields:
-            if "Type **CHOP**" in field.description:
+            if "Type **CHOP**" in field[1].description:
                 time.sleep(1)
                 await message.channel.send("CHOP @everyone")
             else:
@@ -103,7 +103,7 @@ async def on_message(message):
     embeds = message.embeds
     for embed in embeds:
         for field in embed.fields:
-            if "Type **SUMMON**" in field.description:
+            if "Type **SUMMON**" in field[1].description:
                 time.sleep(1)
                 await message.channel.send("SUMMON @everyone")
             else:
@@ -118,7 +118,7 @@ async def on_message(message):
     embeds = message.embeds
     for embed in embeds:
         for field in embed.fields:
-            if "Type **CATCH**" in field.description:
+            if "Type **CATCH**" in field[1].description:
                 time.sleep(1)
                 await message.channel.send("CATCH @everyone")
             else:
@@ -133,7 +133,7 @@ async def on_message(message):
     embeds = message.embeds
     for embed in embeds:
         for field in embed.fields:
-            if "Type **TIME TO FIGHT**" in field.description:
+            if "Type **TIME TO FIGHT**" in field[1].description:
                 time.sleep(1)
                 await message.channel.send("TIME TO FIGHT @everyone")
             else:
