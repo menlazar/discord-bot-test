@@ -73,7 +73,7 @@ async def on_message(message):
     embeds = message.embeds
     for embed in embeds:
         for field in embed.fields:
-            if "A MEGALODON" in field[0].title:
+            if "A MEGALODON" in field[0].title.content:
                 time.sleep(1)
                 await message.channel.send("FISH @everyone")
             else:
@@ -88,7 +88,7 @@ async def on_message(message):
     embeds = message.embeds
     for embed in embeds:
         for field in embed.fields:
-            if "AN EPIC TREE" in field[0].title:
+            if "AN EPIC TREE" in field[0].title.content:
                 time.sleep(1)
                 await message.channel.send("CHOP @everyone")
             else:
@@ -103,7 +103,7 @@ async def on_message(message):
     embeds = message.embeds
     for embed in embeds:
         for field in embed.fields:
-            if "A LOOTBOX SUMMONING" in field[0].title:
+            if "A LOOTBOX SUMMONING" in field[0].title.content:
                 time.sleep(1)
                 await message.channel.send("SUMMON @everyone")
             else:
@@ -118,7 +118,7 @@ async def on_message(message):
     embeds = message.embeds
     for embed in embeds:
         for field in embed.fields:
-            if "IT'S RAINING COINS" in field[0].title:
+            if "IT'S RAINING COINS" in field[0].title.content:
                 time.sleep(1)
                 await message.channel.send("CATCH @everyone")
             else:
@@ -133,7 +133,7 @@ async def on_message(message):
     embeds = message.embeds
     for embed in embeds:
         for field in embed.fields:
-            if "A LEGENDARY BOSS" in field[0].title:
+            if "A LEGENDARY BOSS" in field[0].title.content:
                 time.sleep(1)
                 await message.channel.send("TIME TO FIGHT @everyone")
             else:
@@ -143,5 +143,9 @@ async def on_message(message):
     #if "rpg hunt t" in message.content:
     #    await asyncio.sleep(totalTime)
     #    await message.channel.send("Hunt T Ready")
+
+
+# ---------------------------------------------- GET EMBED --------------------------------------------------------------
+
 
 client.run(my_secret)
