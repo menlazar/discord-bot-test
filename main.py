@@ -64,12 +64,6 @@ async def on_message(message):
 
 
 #-------------------------------------------------- RANDOM EVENTS -----------------------------------------------------------
-@client.event
-async def on_message(message):
-    
-    if message.author == client.user:
-        return
-
     embeds = message.embeds
     for embed in embeds:
         for field in embed.fields:
@@ -78,10 +72,7 @@ async def on_message(message):
                 await message.channel.send("FISH @everyone")
             else:
                 return
-
-@client.event
-async def on_message(message):
-    
+   
     if message.author == client.user:
         return
 
@@ -93,10 +84,7 @@ async def on_message(message):
                 await message.channel.send("CHOP @everyone")
             else:
                 return
-
-@client.event
-async def on_message(message):
-    
+   
     if message.author == client.user:
         return
 
@@ -108,10 +96,7 @@ async def on_message(message):
                 await message.channel.send("SUMMON @everyone")
             else:
                 return
-
-@client.event
-async def on_message(message):
-    
+   
     if message.author == client.user:
         return
 
@@ -123,9 +108,6 @@ async def on_message(message):
                 await message.channel.send("CATCH @everyone")
             else:
                 return
-
-@client.event
-async def on_message(message):
     
     if message.author == client.user:
         return
