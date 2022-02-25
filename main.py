@@ -47,6 +47,11 @@ async def on_message(message):
                                             description="The recommendation looking at the stats is to do a Guild **UPGRADE**",
                                             color=0xFF5733)
                         await message.channel.send(embed=embed)
+                elif value_stealth >= 100:
+                        embed=discord.Embed(title="Demon Slayrs Helper Bot",
+                                            description="The recommendation looking at the stats is to do a Guild **RAID**",
+                                            color=0xFF5733)
+                        await message.channel.send(embed=embed)
                 else:
                     return
 
