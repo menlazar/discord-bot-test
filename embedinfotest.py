@@ -18,4 +18,4 @@ async def on_message(message):
     for embed in embeds:
         print(embed.to_dict())
 
-client.run('OTM5OTk0MzAzOTY1NTkzNjAw.YgA76g.j98pYPF9vjezNiwtMeRMQ7_9MJM')
+client.run('OTM5OTk0MzAzOTY1NTkzNjAw.YgA76g.84EzRFftvFbWItN1yyN6OK3b5qo')
