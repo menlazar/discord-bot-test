@@ -86,7 +86,7 @@ async def on_message(message):
     embeds = message.embeds
     for embed in embeds:
         for field in embed.fields:
-            if "A MEGALODON" in field[0].title.content:
+            if "**FISH**" in field[0].value:
                 time.sleep(1)
                 await message.channel.send("FISH @everyone")
             else:
@@ -98,7 +98,7 @@ async def on_message(message):
     embeds = message.embeds
     for embed in embeds:
         for field in embed.fields:
-            if "AN EPIC TREE" in field[0].title.content:
+            if "**CHOP**" in field[0].value:
                 time.sleep(1)
                 await message.channel.send("CHOP @everyone")
             else:
@@ -110,7 +110,7 @@ async def on_message(message):
     embeds = message.embeds
     for embed in embeds:
         for field in embed.fields:
-            if "A LOOTBOX SUMMONING" in field[0].title.content:
+            if "**SUMMON*" in field[0].value:
                 time.sleep(1)
                 await message.channel.send("SUMMON @everyone")
             else:
@@ -122,7 +122,7 @@ async def on_message(message):
     embeds = message.embeds
     for embed in embeds:
         for field in embed.fields:
-            if "IT'S RAINING COINS" in field[0].title.content:
+            if "**CATCH**" in field[0].value:
                 time.sleep(1)
                 await message.channel.send("CATCH @everyone")
             else:
@@ -134,7 +134,7 @@ async def on_message(message):
     embeds = message.embeds
     for embed in embeds:
         for field in embed.fields:
-            if "A LEGENDARY BOSS" in field[0].title.content:
+            if "**TIME TO FIGHT**" in field[0].value:
                 time.sleep(1)
                 await message.channel.send("TIME TO FIGHT @everyone")
             else:
