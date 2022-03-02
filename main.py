@@ -21,13 +21,13 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    
+
     if message.author == client.user:
         return
 
     embeds = message.embeds
-    for embed in embeds:        
-        for field in embed.fields: 
+    for embed in embeds:
+        for field in embed.fields:
             if "STEALTH" in field.value:
                 value_stealth = int(field.value.splitlines()[1].split("**STEALTH**: ")[1])
                 value_energy = int(field.value.splitlines()[0].split("**ENERGY**: ")[1])
@@ -83,62 +83,60 @@ async def on_message(message):
 
 
 #-------------------------------------------------- RANDOM EVENTS -----------------------------------------------------------
+        if message.author == client.user:
+            return
+
     embeds = message.embeds
     for embed in embeds:
-        for field in embed.fields:
-            if "**FISH**" in field[0].value:
-                time.sleep(1)
-                await message.channel.send("FISH @everyone")
-            else:
-                return
-   
+        if "**FISH**" in embed.fields[0].value:
+            time.sleep(1)
+            await message.channel.send("FISH @everyone")
+        else:
+            return
+
     if message.author == client.user:
         return
 
     embeds = message.embeds
     for embed in embeds:
-        for field in embed.fields:
-            if "**CHOP**" in field[0].value:
-                time.sleep(1)
-                await message.channel.send("CHOP @everyone")
-            else:
-                return
-   
+        if "**CHOP**" in embed.fields[0].value:
+            time.sleep(1)
+            await message.channel.send("CHOP @everyone")
+        else:
+            return
+
     if message.author == client.user:
         return
 
     embeds = message.embeds
     for embed in embeds:
-        for field in embed.fields:
-            if "**SUMMON*" in field[0].value:
-                time.sleep(1)
-                await message.channel.send("SUMMON @everyone")
-            else:
-                return
-   
+        if "**SUMMON*" in embed.fields[0].value:
+            time.sleep(1)
+            await message.channel.send("SUMMON @everyone")
+        else:
+            return
+
     if message.author == client.user:
         return
 
     embeds = message.embeds
     for embed in embeds:
-        for field in embed.fields:
-            if "**CATCH**" in field[0].value:
-                time.sleep(1)
-                await message.channel.send("CATCH @everyone")
-            else:
-                return
-    
+        if "**CATCH**" in embed.fields[0].value:
+            time.sleep(1)
+            await message.channel.send("CATCH @everyone")
+        else:
+            return
+
     if message.author == client.user:
         return
 
     embeds = message.embeds
     for embed in embeds:
-        for field in embed.fields:
-            if "**TIME TO FIGHT**" in field[0].value:
-                time.sleep(1)
-                await message.channel.send("TIME TO FIGHT @everyone")
-            else:
-                return
+        if "**TIME TO FIGHT**" in embed.fields[0].value:
+            time.sleep(1)
+            await message.channel.send("TIME TO FIGHT @everyone")
+        else:
+            return
 #------------------------------------------------ END RANDOM EVENTS ---------------------------------------------------
 
     #if "rpg hunt t" in message.content:
