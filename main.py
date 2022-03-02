@@ -92,6 +92,7 @@ async def on_message(message):
             time.sleep(1)
             await message.channel.send("FISH @everyone")
         else:
+            print("no event embed")
             return
 
     if message.author == client.user:
@@ -103,6 +104,7 @@ async def on_message(message):
             time.sleep(1)
             await message.channel.send("CHOP @everyone")
         else:
+            print("no event embed")
             return
 
     if message.author == client.user:
@@ -114,6 +116,7 @@ async def on_message(message):
             time.sleep(1)
             await message.channel.send("SUMMON @everyone")
         else:
+            print("no event embed")
             return
 
     if message.author == client.user:
@@ -125,6 +128,7 @@ async def on_message(message):
             time.sleep(1)
             await message.channel.send("CATCH @everyone")
         else:
+            print("no event embed")
             return
 
     if message.author == client.user:
@@ -136,6 +140,7 @@ async def on_message(message):
             time.sleep(1)
             await message.channel.send("TIME TO FIGHT @everyone")
         else:
+            print("no event embed")
             return
 #------------------------------------------------ END RANDOM EVENTS ---------------------------------------------------
 
