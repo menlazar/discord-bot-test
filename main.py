@@ -83,8 +83,6 @@ async def on_message(message):
 
 
 #-------------------------------------------------- RANDOM EVENTS -----------------------------------------------------------
-        if message.author == client.user:
-            return
 
     embeds = message.embeds
     for embed in embeds:
@@ -95,9 +93,6 @@ async def on_message(message):
             print("no event embed")
             return
 
-    if message.author == client.user:
-        return
-
     embeds = message.embeds
     for embed in embeds:
         if "**CHOP**" in embed.fields[0].value:
@@ -106,9 +101,6 @@ async def on_message(message):
         else:
             print("no event embed")
             return
-
-    if message.author == client.user:
-        return
 
     embeds = message.embeds
     for embed in embeds:
@@ -119,8 +111,6 @@ async def on_message(message):
             print("no event embed")
             return
 
-    if message.author == client.user:
-        return
 
     embeds = message.embeds
     for embed in embeds:
@@ -130,9 +120,6 @@ async def on_message(message):
         else:
             print("no event embed")
             return
-
-    if message.author == client.user:
-        return
 
     embeds = message.embeds
     for embed in embeds:
