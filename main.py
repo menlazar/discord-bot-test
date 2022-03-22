@@ -32,7 +32,7 @@ async def on_message(message):
                 value_stealth = int(field.value.splitlines()[1].split("**STEALTH**: ")[1])
                 value_energy = int(field.value.splitlines()[0].split("**ENERGY**: ")[1])
                 value_rank = str(field.value.splitlines()[2].split("**RANK**: ")[1])
-                if value_rank == "best 1%":
+                if value_energy > 2500:
                     embed=discord.Embed(title="Demon Slayrs Helper Bot",
                                         description="The recommendation looking at the stats is to do a Guild **UPGRADE**",
                                         color=0xFF5733)
